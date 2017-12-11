@@ -1,0 +1,71 @@
+.base-grid{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px 15px;
+    grid-template-areas:
+            "navPanel navPanel"
+            "bodyPanel bodyPanel";
+}
+.nav-panel{
+    grid-area: navPanel;
+}
+.body-panel{
+    grid-area: bodyPanel;
+}
+
+.two-col-grid{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px 10px;
+    grid-template-areas:
+            "col-1 col-2";
+}
+.col-panel-1{
+    grid-area: col-1;
+}
+.col-panel-2{
+    grid-area: col-2;
+}
+
+/*form*/
+
+.form-grid{
+    display: grid;
+    grid-gap: 5px 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas:
+            "cp1 cp2"
+            "cp3 cp3"
+            "cp4 cp5"
+            "cp6 cp6";
+}
+
+.cp1{
+    grid-area: cp1;
+}
+
+.cp2{
+    grid-area: cp2;
+}
+
+.cp3{
+    grid-area: cp3;
+}
+
+.cp4{
+    grid-area: cp4;
+}
+.cp5{
+    grid-area: cp5;
+}
+
+.cp6{
+    grid-area: cp6;
+}
+
+.default-grid-style{
+    padding: 5px;
+}

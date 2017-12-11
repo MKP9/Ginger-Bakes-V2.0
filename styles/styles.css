@@ -1,0 +1,61 @@
+body{
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #ffffff;
+    color: #A56C16;
+}
+
+.nav-title{
+    font-family: 'Grand Hotel', cursive;
+    font-size: 2em;
+}
+
+ul.nav{
+    justify-self: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    text-align: right;
+}
+ul.nav > li{
+    display: inline;
+    padding: 5px 25px 5px 25px;
+
+    border-radius: 2px;
+}
+
+ul.nav > li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #A56C16;
+}
+
+ul.nav > li:hover{
+    color: #003c85;
+    text-decoration: underline;
+}
+
+.default-panel-style{
+    /*background-color: #f8bfc8;*/
+    background-color: #f8bfc8;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.corner-image{
+    right: 150px;
+    bottom: 1px;
+    background: #f8bfc8 url("../assets/corner_image.png") no-repeat bottom right;
+}
+
+.left-image{
+    margin-right: 10px;
+    float: left;
+}
+
+
+input{
+    width: 100%;
+    height: 20px;
+    padding: 1px;
+}
