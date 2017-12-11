@@ -6,66 +6,84 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/grid_styles.css">
     <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
 </head>
     <body>
-        <div class="base-grid">
-            <div class="nav-panel default-panel-style">
-                <span class="nav-title">Ginger Bakes</span>
-                <div style="float: right; padding-top: 10px">
-                    <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Prices</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="body-panel">
-                <div class="two-col-grid">
-                    <div class="col-panel-1 default-panel-style corner-image">
-                        <img src="assets/cupcake_600x900.jpg" class="left-image" height="450" width="300" alt="Pink Cupcake">
-                        <p>mission</p>
-
-
+        <div id="app">
+            <div class="base-grid">
+                    <div class="nav-panel default-panel-style">
+                        <span class="nav-title">Ginger Bakes</span>
+                        <div style="float: right; padding-top: 10px">
+                            <ul class="nav">
+                                <li><div @click="home">Home</div></li>
+                                <li><div @click="price">Prices</div></li>
+                                <li><div @click="about">About</div></li>
+                                <li><div @click="contact">Contact</div></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-panel-2 default-panel-style corner-image">
-                        <form class="form-grid">
-                            <div class="cp1">
-                                <label for="fname">First Name: <input id="fname" name="fname" type="text"></label>
+                    <div class="body-panel">
+                        <div class="two-col-grid">
+                            <div class="col-panel-1 default-panel-style corner-image">
+                                <img src="assets/IMG_2034.JPG" class="left-image" height="100%" width="100%" alt="Pink Cupcake">
+
                             </div>
-                            <div class="cp2">
-                                <label for="lname">Last Name: <input id="lname" name="lname" type="text"></label>
-                                <br>
-                                <br>
+
+                            <div class="col-panel-2 default-panel-style corner-image">
+
+                                <div v-if="isHome" id="homePanel">
+                                    home panel
+                                </div>
+
+                                <div v-if="isPrice" id="pricePanel">
+                                    price panel
+                                </div>
+
+                                <div v-if="isAbout" id="aboutPanel">
+                                    about panel
+                                </div>
+
+                                <div v-if="isContact" id="contactForm">
+                                    <form class="form-grid">
+                                        <div class="cp1">
+                                            <label for="fname">First Name: <input id="fname" name="fname" type="text"></label>
+                                        </div>
+                                        <div class="cp2">
+                                            <label for="lname">Last Name: <input id="lname" name="lname" type="text"></label>
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <div class="cp3">
+                                            <label for="email">Email: <br><input id="email" name="email" type="email"></label>
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <div class="cp4">
+                                            <label for="tel">Phone Number: <input id="tel" name="tel" type="text"></label>
+                                            <br>
+                                            <br>
+                                            <label for="date">Event Date: <input id="date" name="date" type="date"></label>
+                                        </div>
+                                        <div class="cp5">
+                                            <label for="event">Event Type: <input id="event" name="event" type="text"></label>
+                                            <br><br>
+                                            <label for="people">Number of People: <input id="people" name="people" type="text"></label>
+                                        </div>
+                                        <div class="cp6">
+                                            <br>
+                                            <label for="addInfo">Additional Info:<textarea style="width: 100%;" name="addInfo" id="addInfo" cols="53" rows="10"></textarea></label>
+                                            <br>
+                                            <br>
+                                            <button style="width: 100%;" type="submit">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="cp3">
-                                <label for="email">Email: <br><input id="email" name="email" type="email"></label>
-                                <br>
-                                <br>
-                            </div>
-                            <div class="cp4">
-                                <label for="tel">Phone Number: <input id="tel" name="tel" type="text"></label>
-                                <br>
-                                <br>
-                                <label for="date">Event Date: <input id="date" name="date" type="date"></label>
-                            </div>
-                            <div class="cp5">
-                                <label for="event">Event Type: <input id="event" name="event" type="text"></label>
-                                <br><br>
-                                <label for="people">Number of People: <input id="people" name="people" type="text"></label>
-                            </div>
-                            <div class="cp6">
-                                <br>
-                                <label for="addInfo">Additional Info:<textarea style="width: 100%;" name="addInfo" id="addInfo" cols="53" rows="10"></textarea></label>
-                                <br>
-                                <br>
-                                <button style="width: 100%;" type="submit">Submit</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
-
+        <script src="js/js.js"></script>
     </body>
 </html>

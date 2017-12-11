@@ -20,14 +20,15 @@ ul.nav{
 ul.nav > li{
     display: inline;
     padding: 5px 25px 5px 25px;
-
     border-radius: 2px;
 }
 
-ul.nav > li a{
+ul.nav > li div{
     text-decoration: none;
     font-weight: bold;
     color: #A56C16;
+    cursor: pointer;
+    display: inline;
 }
 
 ul.nav > li:hover{
@@ -59,3 +60,4 @@ input{
     height: 20px;
     padding: 1px;
 }
+
