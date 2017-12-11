@@ -78,7 +78,7 @@
                                 </div>
 
                                 <div v-if="isContact" id="contactForm">
-                                    <form id="theContactForm" class="form-grid">
+                                    <form v-on:submit.prevent id="theContactForm" class="form-grid" method="GET" action="#">
                                         <div class="cp1">
                                             <label for="fname">First Name: <input id="fname" name="fname" type="text"></label>
                                         </div>
@@ -108,9 +108,15 @@
                                             <label for="addInfo">Additional Info:<textarea style="width: 100%;" name="addInfo" id="addInfo" cols="53" rows="10"></textarea></label>
                                             <br>
                                             <br>
-                                            <button style="width: 101%;" type="submit">Submit</button>
+                                            <button @click="confirm" style="width: 101%;" type="submit">Submit</button>
                                         </div>
                                     </form>
+                                </div>
+
+                                <div v-if="isConfirm" id="confirm">
+
+                                    <p style="text-align: center">Thanks for contacting us. We will reply within 24 hours.</p>
+
                                 </div>
                             </div>
                         </div>

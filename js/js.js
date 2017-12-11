@@ -70,9 +70,6 @@ const app = new Vue({
         }
 });
 
-$('#theContactForm').on('submit',function (event) {
-    event.preventDefault();
-});
 
 $("#leftImage").mouseenter(function(){
     $("#speechBub").show();
