@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/grid_styles.css">
     <link href="https://fonts.googleapis.com/css?family=Grand+Hotel" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
     <body>
@@ -24,28 +25,60 @@
                         </div>
                     </div>
                     <div class="body-panel">
-                        <div class="two-col-grid">
+                        <div class="two-col-grid ">
                             <div class="col-panel-1 default-panel-style corner-image">
-                                <img src="assets/IMG_2034.JPG" class="left-image" height="100%" width="100%" alt="Pink Cupcake">
-
+                                <p class="speech" id="speechBub">Puree Raspberry Buttercream $1.50</p>
+                                <img src="assets/IMG_2034.JPG" id="leftImage" height="100%" width="100%" alt="Pink Cupcake">
                             </div>
 
                             <div class="col-panel-2 default-panel-style corner-image">
 
                                 <div v-if="isHome" id="homePanel">
-                                    home panel
+                                    <div class="two-col-grid">
+                                        <div class="col-panel-1 ">
+                                            <img src="assets/Pasted%20image%20at%202017_12_11%2010_06%20AM.png" width="100%" height="100%" alt="">
+                                            <p style="text-align: center">Decorated Sugar Cookies</p>
+                                        </div>
+                                        <div class="col-panel-2">
+                                            <h2>Winter Sale!</h2>
+                                            <p>Stand out for your Holiday Party with custom Winter Themed cookies.</p>
+                                            <p>Normally $1.50 now $0.75!</p>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div v-if="isPrice" id="pricePanel">
-                                    price panel
+                                    <div id="price_heading">
+                                        <h2>General prices</h2>
+                                        <p>All prices below are base prices and subject to change.</p>
+                                        <ul id="priceList">
+                                            <li>Cupcake $1.50 *</li>
+                                            <li>Cakepop $1.00 *</li>
+                                            <li>Cookies $1.50 *</li>
+                                            <li>Basic cake $75.00 *</li>
+                                            <li>Wedding cut cake 6" $100 *</li>
+                                            <li>Wedding cake $400 *</li>
+                                        </ul>
+                                        <p>*Additional flavors, decorations, and designs are an additional charge.</p>
+                                    </div>
+
                                 </div>
 
                                 <div v-if="isAbout" id="aboutPanel">
-                                    about panel
+                                    <h2>Where I began:</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend,
+                                            risus ac fermentum tincidunt, velit tellus ullamcorper metus, eget faucibus
+                                            arcu libero in quam. Nulla tincidunt arcu dolor, a vulputate magna
+                                            consectetur sed. Morbi ac enim at ex placerat laoreet.</p>
+                                    <h2>Where I am:</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend,
+                                            risus ac fermentum tincidunt, velit tellus ullamcorper metus, eget faucibus
+                                            arcu libero in quam. Nulla tincidunt arcu dolor, a vulputate magna
+                                            consectetur sed. Morbi ac enim at ex placerat laoreet.</p>
                                 </div>
 
                                 <div v-if="isContact" id="contactForm">
-                                    <form class="form-grid">
+                                    <form id="theContactForm" class="form-grid">
                                         <div class="cp1">
                                             <label for="fname">First Name: <input id="fname" name="fname" type="text"></label>
                                         </div>
@@ -75,7 +108,7 @@
                                             <label for="addInfo">Additional Info:<textarea style="width: 100%;" name="addInfo" id="addInfo" cols="53" rows="10"></textarea></label>
                                             <br>
                                             <br>
-                                            <button style="width: 100%;" type="submit">Submit</button>
+                                            <button style="width: 101%;" type="submit">Submit</button>
                                         </div>
                                     </form>
                                 </div>

@@ -5,6 +5,10 @@ body{
     color: #A56C16;
 }
 
+.panel-color{
+    color: #ffffff;
+}
+
 .nav-title{
     font-family: 'Grand Hotel', cursive;
     font-size: 2em;
@@ -32,13 +36,13 @@ ul.nav > li div{
 }
 
 ul.nav > li:hover{
-    color: #003c85;
+    color: #f9a716;
     text-decoration: underline;
 }
 
 .default-panel-style{
     /*background-color: #f8bfc8;*/
-    background-color: #f8bfc8;
+    background-color: #ffcdd0;
     padding: 10px;
     border-radius: 3px;
 }
@@ -49,15 +53,45 @@ ul.nav > li:hover{
     background: #f8bfc8 url("../assets/corner_image.png") no-repeat bottom right;
 }
 
-.left-image{
-    margin-right: 10px;
-    float: left;
-}
+/*.left-image{*/
+    /*margin-right: 10px;*/
+    /*float: left;*/
+/*}*/
 
 
 input{
     width: 100%;
     height: 20px;
     padding: 1px;
+}
+
+ul#priceList{
+    justify-self: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    text-align: left;
+}
+
+ul#priceList > li{
+
+    padding: 5px 25px 5px 25px;
+    border-radius: 2px;
+}
+
+.speech {
+    width: 5%;
+    height: 9%;
+    border-radius:100%;
+    border: 2px solid #ffffff;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    background: #f8bfc8;
+    padding: 20px;
+    top: 150px;
+    left: 150px;
+    text-align: center;
+
 }
 

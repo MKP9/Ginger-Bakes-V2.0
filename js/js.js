@@ -1,3 +1,5 @@
+$("#speechBub").hide();
+
 const app = new Vue({
     el: '#app',
     data:
@@ -5,7 +7,8 @@ const app = new Vue({
             isHome: true,
             isContact: false,
             isPrice: false,
-            isAbout: false
+            isAbout: false,
+            isConfirm: false
         },
     methods:
         {
@@ -16,6 +19,7 @@ const app = new Vue({
                     this.isContact = false;
                     this.isPrice = false;
                     this.isAbout = false;
+                    this.isConfirm = false;
                 }
             },
 
@@ -26,6 +30,7 @@ const app = new Vue({
                     this.isHome = false;
                     this.isContact = false;
                     this.isAbout = false;
+                    this.isConfirm = false;
                 }
             },
 
@@ -36,6 +41,19 @@ const app = new Vue({
                     this.isHome = false;
                     this.isPrice = false;
                     this.isAbout = false;
+                    this.isConfirm = false;
+                }
+            },
+
+            confirm: function () {
+                if(!this.isConfirm){
+                    this.isConfirm = true;
+
+                    this.isHome = false;
+                    this.isContact = false;
+                    this.isPrice = false;
+                    this.isAbout = false;
+
                 }
             },
 
@@ -46,8 +64,20 @@ const app = new Vue({
                     this.isHome = false;
                     this.isContact = false;
                     this.isPrice = false;
-
+                    this.isConfirm = false;
                 }
             }
         }
+});
+
+$('#theContactForm').on('submit',function (event) {
+    event.preventDefault();
+});
+
+$("#leftImage").mouseenter(function(){
+    $("#speechBub").show();
+});
+
+$("#leftImage").mouseleave(function(){
+    $("#speechBub").hide();
 });
