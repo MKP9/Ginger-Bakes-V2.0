@@ -78,7 +78,7 @@
                                 </div>
 
                                 <div v-if="isContact" id="contactForm">
-                                    <form v-on:submit.prevent id="theContactForm" class="form-grid" method="GET" action="#">
+                                    <form v-on:submit.prevent="check" id="theContactForm" class="form-grid" method="GET" action="#">
                                         <div class="cp1">
                                             <label for="fname">First Name: <input id="fname" name="fname" type="text"></label>
                                         </div>
@@ -108,7 +108,7 @@
                                             <label for="addInfo">Additional Info:<textarea style="width: 100%;" name="addInfo" id="addInfo" cols="53" rows="10"></textarea></label>
                                             <br>
                                             <br>
-                                            <button @click="confirm" style="width: 101%;" type="submit">Submit</button>
+                                            <button style="width: 101%;" type="submit">Submit</button>
                                         </div>
                                     </form>
                                 </div>

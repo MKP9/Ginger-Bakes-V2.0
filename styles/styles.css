@@ -95,3 +95,8 @@ ul#priceList > li{
 
 }
 
+.inputError{
+    font-size: x-small;
+    color: #ff000b;
+}
+
